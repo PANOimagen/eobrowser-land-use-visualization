@@ -50,7 +50,7 @@ In general, the colors for each zone are:
 
 Below we show an image of Madrid on 26-09-2019. More images can be found in the [examples](https://github.com/PANOimagen/Sentinel-custom-script/tree/master/examples) page.
 
-![image](https://github.com/PANOimagen/Sentinel-custom-script/blob/master/examples/Madrid_2019-09-26.jpg?raw=true)
+![image](https://github.com/PANOimagen/eobrowser-land-use-visualization/blob/master/examples/Madrid_2019-09-26.jpg?raw=true)
 
 
 ## References
