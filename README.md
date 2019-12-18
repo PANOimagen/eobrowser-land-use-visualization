@@ -5,7 +5,7 @@ Authors: Marta Elvira, Roberto Calvo, Javier Becerra. **[PANOimagen S.L.](http:/
 This repository contains a script for EO Browser, specifically designed to visualize Sentinel-2 13 band data in a way that facilitates differentiation of urban areas (red channel), vegetation areas (green channel) and water areas (blue channel). The coefficients used to combine the original 13 bands for each channel have been obtained using three LDA classifiers (i.e. one per channel).
 
 
-- Show [script](https://github.com/PANOimagen/Sentinel-custom-script/blob/master/script.js).
+- Show [script](https://github.com/PANOimagen/eobrowser-land-use-visualization/blob/master/script.js).
 - See in [EO Browser](https://apps.sentinel-hub.com/eo-browser/?lat=40.3840&lng=-3.6440&zoom=11&time=2019-09-26&preset=CUSTOM&datasource=Sentinel-2%20L1C&layers=B01,B02,B03&evalscript=cmV0dXJuIFtNYXRoLmFicyggMC40ODA5ICogKCgoKEIwMiAqIDIuNSkgLSAwLjMzMjkpICogLTkuNDQyNSkgKyAoKChCMDMgKiAyLjUpIC0gMC4zMTgyKSAqIDIuMTg0NikgKyAoKChCMDQgKiAyLjUpIC0gMC4zMzgwKSAqIDIuNTMzMykgKyAoKChCMTEgKiAyLjUpIC0gMC41NjQ0KSAqIDkuOTI1NikgKyAoKChCMTIgKiAyLjUpIC0gMC40MjE2KSAqIC0xMy42OTExKSkgKyAtMC40NzY2KSwKICAgICAgICBNYXRoLmFicyggMC4zMjc1ICogKCgoKEIwMiAqIDIuNSkgLSAwLjI4NDQpICogMTMuMzY0NCkgKyAoKChCMDMgKiAyLjUpIC0gMC4yNzM2KSAqIC02LjY1ODgpICsgKCgoQjA0ICogMi41KSAtIDAuMjc1MCkgKiAtMS4xOTk0KSArICgoKEIwOCAqIDIuNSkgLSAwLjU5NzIpICogLTAuMjA5MCkgKyAoKChCOEEgKiAyLjUpIC0gMC42NjQ4KSAqIDUuMTYzMCkgKyAoKChCMTEgKiAyLjUpIC0gMC41NjUxKSAqIC03LjIxODMpKSArIDAuMDQ2MyksCiAgICAgICAgTWF0aC5hYnMoIDAuMjM2MSAqICgoKChCMDMgKiAyLjUpIC0gMC4yNDI5KSAqIDIxLjg3NTkpICsgKCgoQjA0ICogMi41KSAtIDAuMjMyMSkgKiAtNi4wNjc5KSArICgoKEIwOCAqIDIuNSkgLSAwLjQzNzEpICogLTMuMDYwOCkgKyAoKChCMTEgKiAyLjUpIC0gMC40MTQ2KSAqIC00LjQ0MjApKSArIDAuMjA2MSldOw%3D%3D).
 
 ## General description
@@ -18,7 +18,7 @@ The obtained transformation is visually attractive, and allows easy differentiat
 
 ## Script creation process
 
-We have created our model in Python using LDA method of the scikit-learn library [[1]](#ref1). For the input data, we have taken around 80 images of Sentinel-2 L1C and land use classification from Siose. All the images where taken from the Spanish region of La Rioja (with dates ranging from 2015 to 2019). We have tested the estimated model in different world regions (as you can see in our collected [examples](https://github.com/PANOimagen/Sentinel-custom-script/tree/master/examples)) and find it to be visually satisfying, even though the model has been trained only with images from a small geographical region.
+We have created our model in Python using LDA method of the scikit-learn library [[1]](#ref1). For the input data, we have taken around 80 images of Sentinel-2 L1C and land use classification from Siose. All the images where taken from the Spanish region of La Rioja (with dates ranging from 2015 to 2019). We have tested the estimated model in different world regions (as you can see in our collected [examples](https://github.com/PANOimagen/eobrowser-land-use-visualization/tree/master/examples)) and find it to be visually satisfying, even though the model has been trained only with images from a small geographical region.
 
 The script consist of three components (RGB), each component is created by applying a different LDA to reduce the data to a single dimension for the corresponding color channel.
 
@@ -48,7 +48,7 @@ In general, the colors for each zone are:
 - Water: blue.
 - Snow: white.
 
-Below we show an image of Madrid on 26-09-2019. More images can be found in the [examples](https://github.com/PANOimagen/Sentinel-custom-script/tree/master/examples) page.
+Below we show an image of Madrid on 26-09-2019. More images can be found in the [examples](https://github.com/PANOimagen/eobrowser-land-use-visualization/tree/master/examples) page.
 
 ![image](https://github.com/PANOimagen/eobrowser-land-use-visualization/blob/master/examples/Madrid_2019-09-26.jpg?raw=true)
 
