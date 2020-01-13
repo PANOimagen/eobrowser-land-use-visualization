@@ -62,4 +62,15 @@ In this image we can observe in blue the water, in pink and orange the rocky are
 
 ![image](https://github.com/PANOimagen/eobrowser-land-use-visualization/blob/master/examples/Scandinavian_Mountains%20_2018-07-26.jpg?raw=true)
 
+### Australia on 31-12-2019
+
+These images belong to an area of Australia where there was a fire on 31-12-2019. The image on the left is in true color, we can see that in true color you only see the smoke that produces the fire, instead if we apply a proper script, we can better see the fire. The script we used to create the image on the right is the one found in [[1]](#ref1) for wildfire visualization, and for the third image we used the script described in this repository. We can see that our script also serves to better visualize the fires, the fire appears in bright yellow or red and the smoke in white, pink or light blue colors.
+
+![image](https://github.com/PANOimagen/eobrowser-land-use-visualization/blob/master/examples/Australia_2019-12-31.jpg?raw=true)
+
+![image](https://github.com/PANOimagen/eobrowser-land-use-visualization/blob/master/examples/Australia_2019-12-31_Custom.jpg?raw=true)
+
+## References
+
+<a name="ref1"></a>[1] GitHub repository, [Collection of custom scripts](https://github.com/sentinel-hub/custom-scripts). Accessed on January 2020.
 
